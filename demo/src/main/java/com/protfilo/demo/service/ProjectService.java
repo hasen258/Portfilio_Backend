@@ -39,6 +39,8 @@ public class ProjectService {
         existingProject.setDescription(newProject.getDescription());
         existingProject.setUrlWeb(newProject.getUrlWeb());
         existingProject.setUrlImgProject(newProject.getUrlImgProject());
+        existingProject.setStatus(newProject.getStatus());
+        existingProject.setStartDate(newProject.getStartDate());
 
         return projectRepository.save(existingProject);
     }
