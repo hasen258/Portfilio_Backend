@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProtfiloApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProtfiloApplication.class, args);
+        SpringApplication.run(ProtfiloApplication.class, args);
 	}
 
 }
