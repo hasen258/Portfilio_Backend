@@ -18,7 +18,7 @@ public class SkillController {
     }
 
     // PUBLIC
-    @GetMapping
+    @GetMapping("/all")
     public List<Skill> getAll() {
         return skillService.getAll();
     }
