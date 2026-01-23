@@ -31,7 +31,7 @@ public class ProjectController {
     }
 
     //  CREATE PROJECT
-    @PostMapping("/projects")
+    @PostMapping("/project")
     public Project createProject(@RequestBody Project project) {
         return projectService.createProject(project);
     }
@@ -46,8 +46,8 @@ public class ProjectController {
 
     //  DELETE PROJECT
     @DeleteMapping("/delete/{id}")
-    public String deleteProject(@PathVariable Long id) {
+    public org.springframework.http.ResponseEntity<Void> deleteProject(@PathVariable Long id) {
         projectService.deleteProject(id);
-        return "Project deleted successfully";
+        return org.springframework.http.ResponseEntity.noContent().build();
     }
 }

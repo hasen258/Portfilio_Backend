@@ -40,4 +40,10 @@ public class AuthController {
 
         return ResponseEntity.ok(new LoginResponse(token));
     }
+
+    @GetMapping("/validate")
+    public ResponseEntity<?> validateToken() {
+        // If this method is called, the JwtAuthFilter has already validated the token
+        return ResponseEntity.ok().build();
+    }
 }
